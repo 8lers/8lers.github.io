@@ -1,4 +1,4 @@
-# Time to answer some assignment questions
+# Other assignment questions
 ## Undoing a Git commit
 This can be easily accomplished using the `reset` command. The two options for doing this are
 1. `git reset --soft HEAD~n` 
