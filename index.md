@@ -1,4 +1,4 @@
-# Welcome to the BIOL 812 week 4 project for 8lers
+# Welcome to the BIOL 812 week 4 project for Leif
 This is a simple website built using GitHub Pages, with the goal of learning how to set up a repository and _basic_ website. This is **very** simplified, although some **_modifications_** will be made to formats and header styles.
 
 # What has GitHub Pages ever done for us? 
