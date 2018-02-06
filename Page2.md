@@ -1,5 +1,5 @@
 # The mythical second page of this website:
-## Positives, negatives, and your boss (What has GitHub Pages ever done for us)?
+## Positives, negatives, and your boss (What has GitHub ever done for us)?
 
 To answer Reg's question* from the index page: There are several factors that go into considering whether or not to use GitHub and GitHub Pages for a project. It is a wonderul tool to have available freely and should certainly be used when collaboration between large groups of individuals is required or when documents are shared among many people and it is more efficient to store them on a service that isn't Dropbox.
 
