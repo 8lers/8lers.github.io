@@ -3,6 +3,8 @@
 
 To answer Reg's question* from the index page: There are several factors that go into considering whether or not to use GitHub and GitHub Pages for a project. It is a wonderul tool to have available freely and should certainly be used when collaboration between large groups of individuals is required or when documents are shared among many people and it is more efficient to store them on a service that isn't Dropbox.
 
+This page deals with some of the pros and cons of using GitHub and repositories to store data/code. Other information can also be found for more technical questions at [this page](/Page3.md)
+
 ## Some positives of using GitHub
 GitHub Pages is a powerful tool that allows files to be stored in a public repository online, with hosting by GitHub. This is especially useful when one desires to keep track of lots of code.
 
