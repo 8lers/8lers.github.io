@@ -1,7 +1,7 @@
 # Welcome to the BIOL 812 week 4 project for Leif
 This is a simple website built using GitHub Pages, with the goal of learning how to set up a repository and _basic_ website. This is **very** simplified, although some **_modifications_** will be made to formats and header styles.
 
-# What has GitHub ever done for us? 
+# What has Git ever done for us? 
 ![Alt Text](/life-of-brian.jpg)
 
 That's a good question. [Let's have a look at another page on this site](/Page2.md) for the answer. We can also talk about nerdy stuff like how to undo commits in Git and revert a detached HEAD state at [this page](/Page3.md).
