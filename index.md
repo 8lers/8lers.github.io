@@ -3,5 +3,5 @@ This is a sample of a website built using GitHub Pages, with the goal of learnin
 
 # What has GitHub ever done for us? 
 
-[Let's have a look at another page on this site]() for the answer to that question
+[Let's have a look at another page on this site](Page2.md) for the answer to that question
 
