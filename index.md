@@ -2,7 +2,7 @@
 This is a sample of a website built using GitHub Pages, with the goal of learning how to set up a repository and _basic_ website. This is **very** simplified, although some **_modifications_** will be made to formats and header styles.
 
 # What has GitHub Pages ever done for us? 
-![Alt Text](/images/life-of-brian.png)
+![Alt Text](/life-of-brian.jpg)
 
 [Let's have a look at another page on this site](Page2.md) for the answer to that question
 
