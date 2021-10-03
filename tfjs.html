@@ -81,6 +81,7 @@
       if (window.model) {
         window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
           scores = scores[0];
+          alert(input)
           predicted = scores.indexOf(Math.max(...scores));
           $('#number').html(predicted);//
         });
@@ -133,7 +134,7 @@
         for(var i = 0; i < data.length; i += 4) {
           input.push(data[i + 2] / 255);
         }
-        alert(input)
+        
         predict(input);
       };
       img.src = canvas.toDataURL('image/png');
@@ -164,7 +165,7 @@
       }));
     }, false);
 
-    alert("136")
+    alert("84")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
