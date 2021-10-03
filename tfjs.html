@@ -106,7 +106,7 @@
     }, false);
 
     canvas.addEventListener('mouseup', function() {
-      $('#number').html('<img id="spinner" src="spinner.gif"/>');
+      //$('#number').html('<img id="spinner" src="spinner.gif"/>');
       canvas.removeEventListener('mousemove', onPaint, false);
       var img = new Image();
       img.onload = function() {
@@ -155,14 +155,14 @@
         window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
           scores = scores[0];
           predicted = scores.indexOf(Math.max(...scores));
-          $('#number').html(1);//predicted
+          $('#number').html(predicted);//
         });
       } else {
         // The model takes a bit to load, if we are too fast, wait
         setTimeout(function(){predict(input)}, 50);
       }
     }
-    alert("line157 changed")
+    alert("1 changed + 157 -109")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
