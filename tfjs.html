@@ -105,20 +105,6 @@
       canvas.addEventListener('mousemove', onPaint, false);
     }, false);
 
-    var predict = function(input) {
-      if (window.model) {
-        window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
-          scores = scores[0];
-          predicted = scores.indexOf(Math.max(...scores));
-          $('#number').html(predicted);
-        });
-      } else {
-        // The model takes a bit to load, if we are too fast, wait
-        setTimeout(function(){predict(input)}, 50);
-        //setTimeout(function(){ alert("Hello"); }, 500);
-      }
-    }
-
     canvas.addEventListener('mouseup', function() {
       $('#number').html('<img id="spinner" src="spinner.gif"/>');
       canvas.removeEventListener('mousemove', onPaint, false);
@@ -140,10 +126,9 @@
       context.stroke();
     };
 
-    tf.loadLayersModel('C:/Users/user/Documents/tfwebmodel/model/model.json').then(function(model) {
+    tf.loadLayersModel('model/model.json').then(function(model) {
       window.model = model;
     });
-    //alert(model);
 
     // http://bencentra.com/code/2014/12/05/html5-canvas-touch-events.html
     // Set up touch events for mobile, etc
@@ -164,6 +149,19 @@
         clientY: touch.clientY
       }));
     }, false);
+
+    var predict = function(input) {
+      if (window.model) {
+        window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
+          scores = scores[0];
+          predicted = scores.indexOf(Math.max(...scores));
+          $('#number').html(predicted);
+        });
+      } else {
+        // The model takes a bit to load, if we are too fast, wait
+        setTimeout(function(){predict(input)}, 50);
+      }
+    }
 
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
