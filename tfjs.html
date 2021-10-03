@@ -72,7 +72,11 @@
       $('#number').css({'width': '150px', 'font-size': '120px'});
       $('#clear').css({'font-size': '35px'});
     }
-
+    //
+    tf.loadLayersModel('model/model.json').then(function(model) {
+      window.model = model;
+    });
+      
     var cw = $('#paint').width();
     $('#paint').css({'height': cw + 'px'});
 
@@ -125,10 +129,6 @@
       context.lineTo(mouse.x, mouse.y);
       context.stroke();
     };
-    //
-    tf.loadLayersModel('model/model.json').then(function(model) {
-      window.model = model;
-    });
     
     // http://bencentra.com/code/2014/12/05/html5-canvas-touch-events.html
     // Set up touch events for mobile, etc
@@ -162,7 +162,7 @@
         setTimeout(function(){predict(input)}, 50);
       }
     }
-    alert("1 changed + 157 -109")
+    alert("2 changed moved load 76")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
