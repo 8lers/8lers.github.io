@@ -125,11 +125,11 @@
       context.lineTo(mouse.x, mouse.y);
       context.stroke();
     };
-    //model/
-    tf.loadLayersModel('model.json').then(function(model) {
+    //
+    tf.loadLayersModel('model/model.json').then(function(model) {
       window.model = model;
     });
-    alert("Hi")
+    
     // http://bencentra.com/code/2014/12/05/html5-canvas-touch-events.html
     // Set up touch events for mobile, etc
     canvas.addEventListener('touchstart', function (e) {
@@ -153,8 +153,8 @@
     var predict = function(input) {
       if (window.model) {
         window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
-          scores = scores[0];
-          predicted = scores.indexOf(Math.max(...scores));
+          //scores = scores[0];
+          //predicted = scores.indexOf(Math.max(...scores));
           $('#number').html(predicted);
         });
       } else {
