@@ -133,6 +133,7 @@
         for(var i = 0; i < data.length; i += 4) {
           input.push(data[i + 2] / 255);
         }
+        alert(input)
         predict(input);
       };
       img.src = canvas.toDataURL('image/png');
@@ -163,7 +164,7 @@
       }));
     }, false);
 
-    alert("3 moved predict 80")
+    alert("136")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
