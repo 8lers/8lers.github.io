@@ -107,9 +107,9 @@
 
     var predict = function(input) {
       if (window.model) {
-        //window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
-          //scores = scores[0];
-          //predicted = scores.indexOf(Math.max(...scores));
+        window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
+          scores = scores[0];
+          predicted = scores.indexOf(Math.max(...scores));
           $('#number').html(predicted);
         });
       } else {
@@ -143,7 +143,7 @@
     tf.loadLayersModel('C:/Users/user/Documents/tfwebmodel/model/model.json').then(function(model) {
       window.model = model;
     });
-    //alert("hi");
+    //alert(model);
 
     // http://bencentra.com/code/2014/12/05/html5-canvas-touch-events.html
     // Set up touch events for mobile, etc
@@ -171,4 +171,4 @@
     });
     </script>
   </body>
-</html>
+</html> 
