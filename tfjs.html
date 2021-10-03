@@ -72,8 +72,9 @@
       $('#number').css({'width': '150px', 'font-size': '120px'});
       $('#clear').css({'font-size': '35px'});
     }
-    //
+    
     tf.loadLayersModel('model/model.json').then(function(model) {
+      alert(input)
       window.model = model;
     });
       
@@ -87,7 +88,7 @@
         });
       } else {
         // The model takes a bit to load, if we are too fast, wait
-        alert(input)
+        
         setTimeout(function(){predict(input)}, 50);
       }
     }
@@ -166,7 +167,7 @@
       }));
     }, false);
 
-    alert("90")
+    alert("77")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
