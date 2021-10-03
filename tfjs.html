@@ -79,7 +79,7 @@
       
     var predict = function(input) {
       if (window.model) {
-        alert(window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]))//alert(11)
+        alert(tf.tensor([1, 2, 3, 4]))//alert(11)
         window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
           scores = scores[0];
           
@@ -167,7 +167,7 @@
       }));
     }, false);
 
-    alert("82")
+    alert("82e1")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
