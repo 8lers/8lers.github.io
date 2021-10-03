@@ -79,10 +79,10 @@
       
     var predict = function(input) {
       if (window.model) {
-         $('#number').html(11)//alert(11)
         window.model.predict([tf.tensor(input).reshape([1, 28, 28, 1])]).array().then(function(scores){
           scores = scores[0];
           
+         $('#number').html(11)//alert(11)
           predicted = scores.indexOf(Math.max(...scores));
           $('#number').html(predicted);//
         });
@@ -167,7 +167,7 @@
       }));
     }, false);
 
-    alert("82e3")
+    alert("85")
     $('#clear').click(function(){
       context.clearRect(0, 0, canvas.width, canvas.height);
       $('#number').html('');
